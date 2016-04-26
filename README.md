@@ -48,11 +48,15 @@ centos：
 
 Linux Cooked interface使用编译（venetX，OpenVZ）：
 
-    sh build.sh -DCOOKED
+    make
+
+The generated executable is `net_speeder`.
 
 普通网卡使用编译（Xen，KVM，物理机）：
 
-    sh build.sh
+    make
+
+The generated executable is `net_speeder_cooked`.
 
 使用方法(需要root权限启动）：
 

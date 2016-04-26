@@ -35,12 +35,13 @@ void print_usage(void) {
 }
 
 void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet) {
-	static int count = 1;                  
-	struct libnet_ipv4_hdr *ip;              
-
+	static int count = 1;
+	struct libnet_ipv4_hdr *ip;
 	libnet_t *libnet_handler = (libnet_t *)args;
+
+	(void)header;
 	count++;
-	
+
 	ip = (struct libnet_ipv4_hdr*)(packet + ETHERNET_H_LEN);
 
 	if(ip->ip_ttl != SPECIAL_TTL) {
