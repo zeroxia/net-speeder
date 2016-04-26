@@ -60,10 +60,10 @@ The generated executable is `net_speeder_cooked`.
 
 使用方法(需要root权限启动）：
 
-# ./net_speeder -h
+  # ./net_speeder -h
 
 For normal hosts:
-# ./net_speeder -i eth0 -c 2 ip
+  # ./net_speeder -i eth0 -c 2 ip
 
 For OpenVZ hosts:
-# ./net_speeder -i venet0 -c 2 ip
+  # ./net_speeder -i venet0 -c 2 ip
