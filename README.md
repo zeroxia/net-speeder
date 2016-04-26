@@ -60,6 +60,10 @@ The generated executable is `net_speeder_cooked`.
 
 使用方法(需要root权限启动）：
 
-    #参数：./net_speeder 网卡名 加速规则（bpf规则）
-    #ovz用法(加速所有ip协议数据)： 
-    ./net_speeder venet0 "ip"
+# ./net_speeder -h
+
+For normal hosts:
+# ./net_speeder -i eth0 -c 2 ip
+
+For OpenVZ hosts:
+# ./net_speeder -i venet0 -c 2 ip
